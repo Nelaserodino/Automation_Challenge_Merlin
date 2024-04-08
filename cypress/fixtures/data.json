@@ -1,0 +1,8 @@
+{
+  "googleWebsite" : "www.google.com",
+  "wikipediaWebsite" : "es.wikipedia.org",
+  "searchTerm": "automatización",
+  "linkIncludes": "wikipedia",
+  "yearOfFirstAutomatedProcess": "1785",
+  "processKeywords" : "['primer proceso', 'automatizado']"
+}
