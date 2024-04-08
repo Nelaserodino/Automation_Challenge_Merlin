@@ -33,12 +33,15 @@ Este proyecto presenta una solución al challenge propuesto por Merlin Software,
    git clone https://github.com/tu-usuario/merlin-software-challenge.git
 
 2. Navega al directorio del proyecto:
+   ```sh
    cd merlin-software-challenge
 
 3. Instala las dependencias del proyecto (incluyendo Cypress):
+   ```sh
    npm install
 
 Uso
 Para abrir Cypress y ejecutar los scripts de pruebas interactivamente:
-  npm test
+   ```sh
+   npm test
 
