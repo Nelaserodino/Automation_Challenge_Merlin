@@ -1,10 +1,8 @@
 import data from '../../fixtures/data.json'
-import { webAutomationSearchTerm } from '../../support/POM/WebAutomationSearchTerm.Page';
+import { webAutomationSearchTerm } from '../../support/Pages/WebAutomationSearchTerm.Page';
 
 
 describe('Web Automation', () => {
-  
-    
     it('Chack that the user can search for the term "automatización" on google', () => {
       cy.visit(data.googleWebsite)
       cy.url().should('include','google')

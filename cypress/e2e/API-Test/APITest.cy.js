@@ -1,5 +1,5 @@
-import { UserAPIPage } from "../../support/POM/UserAPI.Page";
-import { PetAPIPage } from "../../support/POM/PetAPI.Page";
+import { UserAPIPage } from "../../support/Pages/UserAPI.Page";
+import { PetAPIPage } from "../../support/Pages/PetAPI.Page";
 import { PetCounter } from '../../support/utils/PetCounter';
 
 
