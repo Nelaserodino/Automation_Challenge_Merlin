@@ -5,7 +5,9 @@ export class UserAPIPage {
 
     //Method to Log in
     userLogIn(username, password) {
-        return cy.request('GET', `${this.baseUrl}/user/login`, {
+        return cy.request({
+            url: `${this.baseUrl}/user/login`,
+            headers: { 'Content-Type': 'application/json' },
             username: username,
             password: password
           })
@@ -13,24 +15,29 @@ export class UserAPIPage {
 
     //Method to Create a new user
     createUser(userInfo) {
-        return cy.request('POST', `${this.baseUrl}/user`, {
+        return cy.request({
+            method: 'POST',
+            url: `${this.baseUrl}/user`,
             headers: { 'Content-Type': 'application/json' },
             body: userInfo
-          })
+            });
     }
 
     //Method to get a user´s details
     getUser(username){
-        return cy.request('GET', `${this.baseUrl}/user/${username}`, {
-            headers: { 'Content-Type': 'application/json' }
-        });
+        return cy.request({
+            url: `${this.baseUrl}/user/${username}`,
+            headers: { 'Content-Type': 'application/json' },
+            });
     }   
 
     //Method to delete a user
     deleteUser(username){
-        return cy.request('DELETE', `${this.baseUrl}/user/${username}`, {
-            headers: { 'Content-Type': 'application/json' }
-        });
+        return cy.request({
+            method: 'DELETE',
+            url: `${this.baseUrl}/user/${username}`,
+            headers: { 'Content-Type': 'application/json' },
+            });
     }  
 };
 

@@ -9,8 +9,13 @@ describe('API Tests - User and Pet', () => {
   let petAPI = new PetAPIPage(baseUrl); 
 
   const userInfo = {
-    username: 'Nela',
+    id : 123,
+    firstname : 'NelaTest',
+    username: 'NelaPrueba1',
     password: "password123",
+    email : "test@test.com",
+    phone: "123456",
+    userStatus: 0
   };
   
   before ('login', () => {
@@ -36,24 +41,24 @@ describe('API Tests - User and Pet', () => {
     });
   })
 
-  it('Delete the crated user', () =>{
+  it('Delete the created user', () =>{
     userAPI.getUser(userInfo.username).then(response => {
       expect(response.status).to.eq(200);
     });
   })
 
   it('Get Sold Pets and verify', () => {
-    petAPI.getPetByStatus('pending').then(soldPets => {
+    petAPI.getPetByStatus('sold').then(soldPets => {
       cy.log(soldPets)
       expect(soldPets).to.be.an('array');
       soldPets.forEach(pet => {
-        expect(pet.status).to.eq('pending');
+        expect(pet.status).to.eq('sold');
       });
     });
   });
 
   it('Count repeated pet names by status', () => {
-    petAPI.getPetByStatus('pending').then(pets => {
+    petAPI.getPetByStatus('sold').then(pets => {
       cy.log(pets)
       const petCounter = new PetCounter(pets);
       const nameCounts = petCounter.countPetNames();
