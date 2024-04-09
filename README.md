@@ -11,7 +11,6 @@ Este proyecto presenta una solución al challenge propuesto por Merlin Software,
 - **Uso de Cypress**: Se emplea Cypress como herramienta principal de automatización, aprovechando su capacidad para realizar tanto pruebas de front-end como de back-end en un solo framework.
 - **Patrón Page Object Model (POM)**: Implementación del patrón de diseño Page Object Model para mejorar la mantenibilidad del código y reducir la duplicación, facilitando así la gestión de los elementos de la UI y las interacciones con la página.
 - **Uso de Fixtures para Data Estática**: Empleo de fixtures en Cypress para manejar data estática, lo que permite simular respuestas de API y datos de entrada para las pruebas de manera eficaz y organizada.
-- **Integración Robusta de API y Web Scraping**: Combinación de técnicas de web scraping con pruebas de API para una automatización completa, desde la extracción de datos hasta su procesamiento y validación.
 
 ## Tecnologías Utilizadas
 
