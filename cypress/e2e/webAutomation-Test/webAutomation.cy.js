@@ -3,7 +3,7 @@ import { webAutomationSearchTerm } from '../../support/Pages/WebAutomationSearch
 
 
 describe('Web Automation', () => {
-    it('Chack that the user can search for the term "automatización" on google', () => {
+    it('Chack that the user can search for the term "automatización" on google, select a wikipedia link and assert the year of first automated process', () => {
       cy.visit(data.googleWebsite)
       cy.url().should('include','google')
       webAutomationSearchTerm.clickAcceptCookiesButton();
