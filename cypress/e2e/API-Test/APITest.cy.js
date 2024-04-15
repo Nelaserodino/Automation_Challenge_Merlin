@@ -59,10 +59,11 @@ describe('API Tests - User and Pet', () => {
 
   it('Count repeated pet names by status', () => {
     petAPI.getPetByStatus('sold').then(pets => {
-      cy.log(pets)
       const petCounter = new PetCounter(pets);
       const nameCounts = petCounter.countPetNames();
-      cy.log(nameCounts)
+      for (const [name, count] of Object.entries(nameCounts)) {
+        console.log(`Name: ${name}, Count: ${count}`);
+      }
     })
   })
 });
